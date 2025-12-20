@@ -33,6 +33,7 @@
 				"Extensions/NSNumber+Extension.swift",
 				"Extensions/String+Extension.swift",
 				"Extensions/URLSession+Extension.swift",
+				SwiftServicesProtocol.swift,
 			);
 			target = 9F6D6EA92EF65E4E00095216 /* SwiftServicesTests */;
 		};
