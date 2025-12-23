@@ -29,11 +29,18 @@
 		9F6D6EC62EF65EAA00095216 /* Exceptions for "SwiftServices" folder in "SwiftServicesTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				ArrayEncoding.swift,
+				BoolEncoding.swift,
 				"Extensions/JSONDecoder+Extension.swift",
 				"Extensions/NSNumber+Extension.swift",
 				"Extensions/String+Extension.swift",
 				"Extensions/URLSession+Extension.swift",
+				HTTPBody.swift,
+				HTTPError.swift,
+				HTTPMethod.swift,
+				SSError.swift,
 				SwiftServicesProtocol.swift,
+				"SwiftServicesProtocol+Query.swift",
 			);
 			target = 9F6D6EA92EF65E4E00095216 /* SwiftServicesTests */;
 		};
