@@ -8,7 +8,7 @@
 import Foundation
 
 extension SwiftServicesProtocol {
-    private func queryOfReq(_ parameters: [String: Any]) -> String {
+    func queryOfReq(_ parameters: [String: Any]) -> String {
         var components: [(String, String)] = []
 
         for key in parameters.keys.sorted(by: <) {
