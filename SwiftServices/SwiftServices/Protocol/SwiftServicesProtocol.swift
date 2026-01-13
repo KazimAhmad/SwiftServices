@@ -12,11 +12,6 @@ protocol SwiftServicesProtocol {
     var encoder: JSONEncoder { get }
     var decoder: JSONDecoder { get }
     var errorType: (Codable & Error).Type? { get }
-        
-    // File not found => WSError.notConnected
-    var previewsStatucCode: Int { set get }
-    // Delay request in seconds
-    var previewsSleepSeconds: TimeInterval { set get }
     
     func request<T: Decodable>(_ path: String,
                                method: HTTPMethod,

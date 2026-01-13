@@ -31,6 +31,7 @@
 			membershipExceptions = (
 				Encoding/ArrayEncoding.swift,
 				Encoding/BoolEncoding.swift,
+				EndPoints/Endpoints.swift,
 				Error/HTTPError.swift,
 				Error/SSError.swift,
 				"Extensions/JSONDecoder+Extension.swift",
@@ -39,8 +40,16 @@
 				"Extensions/URLSession+Extension.swift",
 				Http/HTTPBody.swift,
 				Http/HTTPMethod.swift,
+				"Implementation/SwiftServicesProtocol+Extension.swift",
+				Models/CharacterData.swift,
+				Models/CharacterInfo.swift,
+				Models/ListFilters.swift,
+				Models/RnMCharacter.swift,
+				Models/RnMLocation.swift,
 				Protocol/SwiftServicesProtocol.swift,
 				"Query/SwiftServicesProtocol+Query.swift",
+				SwiftServices.swift,
+				"SwiftServices+Requests.swift",
 			);
 			target = 9F6D6EA92EF65E4E00095216 /* SwiftServicesTests */;
 		};

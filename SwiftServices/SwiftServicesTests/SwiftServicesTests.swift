@@ -10,6 +10,8 @@ import XCTest
 
 final class SwiftServicesTests: XCTestCase {
 
+    var sut = SwiftServices.shared
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -32,5 +34,29 @@ final class SwiftServicesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
+    func testLocations() async throws {
+        let expectation = expectation(description: "Should fetch 1 location")
+        let idForLocation: Int = 1
+        let location = try await CharacterLocation.get(for: String(idForLocation))
+        XCTAssertTrue(location.id == idForLocation)
+        expectation.fulfill()
+        await fulfillment(of: [expectation], timeout: 2.0)
+    }
+    
+    func testLocationsFromServices() async throws {
+        let idForLocation: Int = 1
+        let location = try await sut.getLocations(for: String(idForLocation))
+        XCTAssertTrue(location.id == idForLocation)
+    }
+    
+    func testLocationsFromServiceWithTime() async {
+        let startTime = Date()
+        Task {
+            let location = try await sut.getLocations(for: String(1))
+            let elapsedTime = Date().timeIntervalSince(startTime)
+            XCTAssertEqual(location.id, 1, "Should fetch 1 location")
+            XCTAssertLessThan(elapsedTime, 0.5)
+        }
+    }    
 }

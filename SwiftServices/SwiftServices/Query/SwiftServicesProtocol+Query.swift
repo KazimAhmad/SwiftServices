@@ -8,6 +8,10 @@
 import Foundation
 
 extension SwiftServicesProtocol {
+    // the query for a request is a string that is appended in the url
+    // which gives limitation of using conditions to make query a string while preparing for the request
+    // this custom function gives liberty to send anything as a dictionay in the request even arrays and bools as swift objects
+    // then this func handles the query when the request is created as a url request
     func queryOfReq(_ parameters: [String: Any]) -> String {
         var components: [(String, String)] = []
 

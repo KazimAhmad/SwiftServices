@@ -9,6 +9,9 @@ import Combine
 import Foundation
 
 public class ObserverObject: ObservableObject {
+    // this is a custom object made with combine and obseervable object
+    // to inherit the object that needs to be observed for changes
+    // instaed of doing this to object individually
     public var cancellables: Set<AnyCancellable> = []
     
     public func sync<O: ObservableObject>(with object: O) {
